@@ -42,7 +42,7 @@ int main() {
                 case 4: calcularSolucionOptima(); break;
                 case 5: graficarSolucion(); break;
                 case 6: cout << "\nSaliendo del programa...\n"; break;
-                default: cout << "Opción no valida\n";
+                default: cout << "Opcion no valida\n";
             }
         } while (opcion != 6);
     } catch (const exception& e) {
@@ -96,26 +96,27 @@ void ingresoPreciodeVenta() {
 
 // Opción 2: Ingresar restricciones de producción
 void ingresoRestriccionesDeProduccion() {
-    try {
-        cout << "\n--- INGRESO DE RESTRICCIONES ---" << endl;
-        cout << "Formato: coeficienteX1 coeficienteX2 valorTotal\n";
-        cout << "Ejemplo: 4 3 240 (para 4x1 + 3x2 <= 240)\n";
-        cout << "Escriba 'fin' para terminar\n";
+    cout << "\n--- INGRESO DE RESTRICCIONES ---" << endl;
+    cout << "Formato: coeficienteX1 coeficienteX2 valorTotal\n";
+    cout << "Ejemplo: 4 3 240 (para 4x1 + 3x2 <= 240)\n";
+    cout << "Escriba 'fin' para terminar\n";
 
-        cin.ignore(); // Limpiar el búfer de entrada
+    cin.ignore(); // Limpiar el búfer de entrada
 
-        while (true) { 
-            string entrada;
-            double x1, x2, total;
+    while (true) {
+        string entrada;
+        double x1, x2, total;
 
-            cout << "\nIngrese restriccion: ";
-            getline(cin, entrada);
+        cout << "\nIngrese restriccion: ";
+        getline(cin, entrada);
 
-            if (entrada == "fin") break; // Termina el ingreso de restricciones
+        if (entrada == "fin") break; // Termina el ingreso de restricciones
 
-            if (sscanf(entrada.c_str(), "%lf %lf %lf", &x1, &x2, &total) == 3) { // Intenta leer 3 números
-                if (x1 >= 0 && x2 >= 0 && total >= 0) { // Verifica que todos los coeficientes sean positivos
-                    restricciones.push_back({x1, x2, total}); // Agrega la restricción al vector dinamico
+        // Intenta parsear y validar la entrada
+        try {
+            if (sscanf(entrada.c_str(), "%lf %lf %lf", &x1, &x2, &total) == 3) { // Verifica que se ingresen 3 números
+                if (x1 >= 0 && x2 >= 0 && total >= 0) { // Validación de valores no negativos
+                    restricciones.push_back({x1, x2, total}); // Almacena en el vector dinamicamente
                     cout << "Agregada: " << x1 << "x1 + " << x2 << "x2 <= " << total << endl;
                 } else {
                     throw invalid_argument("Todos los coeficientes deben ser valores positivos.");
@@ -123,17 +124,16 @@ void ingresoRestriccionesDeProduccion() {
             } else {
                 throw invalid_argument("Formato incorrecto. Use 3 numeros separados por espacios.");
             }
+        // Captura errores de formato o validación
+        } catch (const invalid_argument& e) {
+            cerr << "Error: " << e.what() << " Intente de nuevo.\n";
         }
+    }
 
-        // Mostrar todas las restricciones
-        cout << "\nRestricciones registradas:" << endl;
-        for (auto& r : restricciones) { 
-            cout << r[0] << "x1 + " << r[1] << "x2 <= " << r[2] << endl;
-        }
-
-    } catch (const invalid_argument& e) {
-        cerr << "Error: " << e.what() << "\nReintentando ingreso de la ultima restriccion...\n";
-        ingresoRestriccionesDeProduccion(); // Reintenta toda la función
+    // Mostrar todas las restricciones válidas
+    cout << "\nRestricciones registradas:" << endl;
+    for (auto& r : restricciones) {
+        cout << r[0] << "x1 + " << r[1] << "x2 <= " << r[2] << endl;
     }
 }
 
