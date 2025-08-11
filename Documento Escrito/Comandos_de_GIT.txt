@@ -1,0 +1,141 @@
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2
+$ git init
+Initialized empty Git repository in C:/Users/Ronald/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2/.git/
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Proyecto_b2.docx
+        proyecto2doBimestre.cpp
+        proyecto2doBimestre.exe
+        region.dat
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git add .
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git commit -m "Primera Version Completa del Proyecto"
+[main (root-commit) f1f76c2] Primera Version Completa del Proyecto
+ 4 files changed, 312 insertions(+)
+ create mode 100644 Proyecto_b2.docx
+ create mode 100644 proyecto2doBimestre.cpp
+ create mode 100644 proyecto2doBimestre.exe
+ create mode 100644 region.dat
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git branch -M main
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git remote add origin https://github.com/ArlRonald995/Proyecto-Segundo-Bimestre-Programaci-n1.git
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 1.75 MiB | 919.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ArlRonald995/Proyecto-Segundo-Bimestre-Programaci-n1.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Proyecto_b2.docx
+        modified:   proyecto2doBimestre.cpp
+        modified:   proyecto2doBimestre.exe
+        modified:   region.dat
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+        declaraciones.h
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git add .
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git commit -m "Segunda Version Completa del Proyecto"
+[main a64fe75] Segunda Version Completa del Proyecto
+ 6 files changed, 185 insertions(+), 126 deletions(-)
+ create mode 100644 .vscode/settings.json
+ create mode 100644 declaraciones.h
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git push origin main
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (9/9), 49.41 KiB | 1.59 MiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/ArlRonald995/Proyecto-Segundo-Bimestre-Programaci-n1.git
+   f1f76c2..a64fe75  main -> main
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   proyecto2doBimestre.cpp
+        modified:   proyecto2doBimestre.exe
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        tempCodeRunnerFile.cpp
+        tempCodeRunnerFile.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   proyecto2doBimestre.cpp
+        modified:   proyecto2doBimestre.exe
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git add .
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git commit -m "Tercera Version Completa del Proyecto"
+[main f3e82e5] Tercera Version Completa del Proyecto
+ 2 files changed, 25 insertions(+), 25 deletions(-)
+
+Ronald@LOQRon MINGW64 ~/OneDrive - Escuela Politécnica Nacional/Escritorio/EPN/Primer Semestre/Programación/Tareas en Grupo/Proyecto_B2 (main)
+$ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 10.71 KiB | 1.78 MiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/ArlRonald995/Proyecto-Segundo-Bimestre-Programaci-n1.git
+   a64fe75..f3e82e5  main -> main

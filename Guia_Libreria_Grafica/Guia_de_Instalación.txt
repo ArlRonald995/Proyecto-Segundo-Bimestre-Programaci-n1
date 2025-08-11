@@ -1,0 +1,12 @@
+Estimado Usuario, para que al clonar el proyecto desde GitHub y este funcione correctamente debe instalar la librería gráfica que se usa en el mismo:
+
+- Adjunto el ejecutable de la librería
+- Por favor siga la guía de pasos en el documento escrito .pdf o .word
+
+Cuando complete esta instalación podrá ejecutar el código con normalidad.
+
+IMPORTANTE: 
+Colocar la dirección de la librería grafica en las "Variables de Entorno" del sistema, específicamente en el PATH del sistema:
+- Dirección a colocar: C:\Program Files\gnuplot\bin 
+Esta dirección depende de donde instaló la librería gráfica anteriormente, si no altero la dirección predeterminada, debería funcionar.
+
