@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  proyecto-cpp:
+    build: .
+    container_name: programacion-lineal
+    stdin_open: true
+    tty: true
+    volumes:
+      - output_data:/app/output
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    environment:
+      - DISPLAY=${DISPLAY}
+    networks:
+      - proyecto-network
+    working_dir: /app
+
+volumes:
+  output_data:
+
+networks:
+  proyecto-network:
+    driver: bridge

@@ -1,0 +1,6 @@
+*.exe
+region.dat
+Documento*
+Guia*
+.git
+.gitignore
